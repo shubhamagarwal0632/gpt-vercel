@@ -17,6 +17,7 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.error('MongoDB connection error:', error);
 });
 
+
 // Counter schema and model
 const counterSchema = new mongoose.Schema({
     count: { type: Number, default: 0 }
@@ -25,6 +26,10 @@ const Counter = mongoose.model('Counter', counterSchema);
 
 // Middleware to parse JSON
 app.use(express.json());
+
+app.get('/',(req, res)=>{
+    res.send('server is running successfully...............')
+})
 
 // Get counter value
 app.get('/counter', async (req, res) => {
