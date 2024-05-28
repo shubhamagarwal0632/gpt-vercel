@@ -6,5 +6,10 @@
     "routes": [
       { "src": "/(.*)", "dest": "/index.js" }
     ]
+    ,
+     "env": {
+        "MONGODB_URI": "mongodb+srv://allinone1creater:yZcMFEN7xScca50R@webdevmastry.qdmg1eg.mongodb.net/" ,
+        "PORT": "5000"
+      }
   }
   
