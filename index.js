@@ -29,8 +29,11 @@ app.use(express.json());
 
 // Route to render hello view
 app.get('/', (req, res) => {
-    res.render('hello');
+    res.send('hello');
 });
+app.get('/hello',(req,res)=>{
+    res.render('hello')
+})
 
 // Get counter value
 app.get('/counter', async (req, res) => {
